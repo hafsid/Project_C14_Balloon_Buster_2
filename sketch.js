@@ -31,11 +31,7 @@ function setup() {
   bow.scale = 1;
   
    score = 0  
-  redB= new Group();
-  greenB= new Group();
-  blueB= new Group();
-  pinkB= new Group();
-  arrowGroup= new Group();
+  //create groups for all the sprites
  
   
 }
@@ -73,37 +69,7 @@ function draw() {
     }
   }
   
-  if (arrowGroup.isTouching(redB)) {
-  redB.destroyEach();
-  arrowGroup.destroyEach();
-    score=score+1;
-}
-
-
-
-
- if (arrowGroup.isTouching(greenB)) {
-  greenB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+3;
-}
-
-
-
- if (arrowGroup.isTouching(blueB)) {
-  blueB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+2;
-}
-
-
-
-if (arrowGroup.isTouching(pinkB)) {
-  pinkB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+1;
-}
-
+ //write if conditions for the detection of balloons and the arrow
   
   drawSprites();
   text("Score: "+ score, 300,50);
